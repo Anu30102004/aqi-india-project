@@ -1,21 +1,21 @@
-# aqi-india-project
-# Air Quality Index Analysis — Indian Cities
+# Air Quality Analysis — Indian Cities
 
-## Overview
-End-to-end Data Science project analysing AQI across 26 Indian 
-cities (2015–2020) using real government pollution data.
+This was my final year project for my Data Science degree. I wanted 
+to work with something real and relevant to India, so I chose air 
+quality data from the CPCB (via Kaggle).
 
-## Key Findings
-- Ahmedabad had the highest average AQI in the dataset
-- Winter AQI is significantly higher than Summer (p < 0.0001)
-- CO is the strongest AQI driver (r > 0.85)
-- Yesterday's AQI is the best predictor of today's AQI
+## What surprised me
+I went in expecting Delhi to dominate just like every news article does. 
+But in this dataset, Ahmedabad came out on top. After digging in, 
+it makes sense ; Ahmedabad has a heavy industrial belt and the 
+dataset has stronger coverage for Gujarat stations.
 
-## Models
-| Model              | R²    | RMSE  |
-|--------------------|-------|-------|
-| Linear Regression  | 0.913 | 28.9  |
-| Random Forest      | 0.923 | 38.9  |
+CO turned out to be more correlated with AQI than PM2.5 in this 
+dataset. I think this reflects how vehicle-heavy Indian cities are 
+compared to datasets from other countries where industrial/dust 
+sources drive PM2.5 more.
 
-## Tools
-NumPy · Pandas · Scikit-learn · Matplotlib · Seaborn · SciPy
+## If I had more time
+- I'd add weather data (temperature, wind speed) as features
+- Try an LSTM model for proper time series forecasting
+- Look at COVID-19's impact on AQI in 2020
