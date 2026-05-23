@@ -18,4 +18,4 @@ cities (2015–2020) using real government pollution data.
 | Random Forest      | 0.923 | 38.9  |
 
 ## Tools
-Python · Pandas · Scikit-learn · Matplotlib · Seaborn · SciPy
+NumPy · Pandas · Scikit-learn · Matplotlib · Seaborn · SciPy
