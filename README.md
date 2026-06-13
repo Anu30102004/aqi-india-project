@@ -1,4 +1,4 @@
-## Project Walkthrough (For Quick Reference)
+## Project Walkthrough 
 
 **Objective**: Analyze Air Quality Index (AQI) patterns across Indian cities using real-world CPCB data, identify pollution hotspots, and derive key insights.
 
