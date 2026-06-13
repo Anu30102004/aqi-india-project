@@ -1,21 +1,25 @@
-# Air Quality Analysis — Indian Cities
+## Project Walkthrough (For Quick Reference)
 
-This was my final year project for my Data Science degree. I wanted 
-to work with something real and relevant to India, so I chose air 
-quality data from the CPCB (via Kaggle).
+**Objective**: Analyze Air Quality Index (AQI) patterns across Indian cities using real-world CPCB data, identify pollution hotspots, and derive key insights.
 
-## What surprised me
-I went in expecting Delhi to dominate just like every news article does. 
-But in this dataset, Ahmedabad came out on top. After digging in, 
-it makes sense ; Ahmedabad has a heavy industrial belt and the 
-dataset has stronger coverage for Gujarat stations.
+**Data**: `city_day.csv` from Kaggle (CPCB, 2015–2020) – ~29,000 rows, 16 columns.
 
-CO turned out to be more correlated with AQI than PM2.5 in this 
-dataset. I think this reflects how vehicle-heavy Indian cities are 
-compared to datasets from other countries where industrial/dust 
-sources drive PM2.5 more.
+**Preprocessing**:
+- Group-by-City **Median Imputation** for missing pollutant values (robust to outliers)
+- Dropped rows with missing AQI
+- Feature engineering: Year, Month, Season (Winter/Summer/Monsoon)
 
-## If I had more time
-- I'd add weather data (temperature, wind speed) as features
-- Try an LSTM model for proper time series forecasting
-- Look at COVID-19's impact on AQI in 2020
+**Key Insights from EDA**:
+- Ahmedabad has the highest average AQI (due to strong industrial station coverage in dataset)
+- CO shows stronger correlation with AQI than PM2.5 (reflects vehicular traffic dominance in India)
+- Higher pollution in Winter months
+
+**Visualizations**: Top polluted cities barplot, Correlation heatmap, Time-series trends, Seasonal boxplots
+
+**Modeling**: Simple Linear Regression to predict AQI (evaluated using R² and MAE)
+
+**Limitations & Future Work**:
+- Dataset has station coverage bias
+- Future: Add weather data, LSTM time-series forecasting, Streamlit dashboard
+
+---
