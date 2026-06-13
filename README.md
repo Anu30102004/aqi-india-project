@@ -16,7 +16,7 @@
 
 **Visualizations**: Top polluted cities barplot, Correlation heatmap, Time-series trends, Seasonal boxplots
 
-**Modeling**: Simple Linear Regression to predict AQI (evaluated using R² and MAE)
+**Modeling**: Simple Linear Regression to predict AQI (evaluated using R² and RMSE)
 
 **Limitations & Future Work**:
 - Dataset has station coverage bias
